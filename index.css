@@ -1,1 +1,26 @@
-body {background-color: blue;}
+body {background-color: wheat;}
+
+html { font-size: 62.5%;}
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: tomato;
+
+}
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin-right: 2rem;
+}
+
+.nav-list a{
+    display: block;
+    font-size: 2rem;
+    padding: 2rem;
+    color: white; 
+    text-decoration: none; 
+}
+
+.nav-list a:hover { 
+    background-color: violet;
+}

@@ -1,0 +1,86 @@
+body {
+    background-color: #86b4c2;
+    margin: 0px auto;
+    width: 900px;
+    font-family: sans-serif;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  header img {
+    height: 120px;
+  }
+  h2 h4 {
+    margin: 0px;
+  }
+  #bio {
+    display: flex;
+  }
+  section img {
+    height: 200px;
+  }
+  ul {
+    padding-left: 15px;
+  }
+  #name-date {
+    display: flex;
+    justify-content: space-between;
+  }
+  #name-date h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  time {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  #choose-list {
+    background-color: #bbb;
+    padding: 8px 0 4px 12px;
+  }
+  #choose-list h4 {
+    margin: 5px 0 12px 0;
+  }
+  
+  #bio-choose {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 12px;
+  }
+  
+  #tech {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+  }
+  figure {
+    margin: 0;
+  }
+  
+  figure img {
+    max-height: 150px;
+    width: 150px;
+    margin: 0;
+    justify-content: space-between;
+  }
+  figcaption {
+    background-color: rgba(12, 12, 12, 0.5);
+    color: white;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    font-size: smaller;
+  }
+  #excited-about {
+    backgound-color: gray;
+  }
+  footer {
+    text-align: center;
+  }
+  
