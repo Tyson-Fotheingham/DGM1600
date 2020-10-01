@@ -6,8 +6,7 @@ html { font-size: 62.5%;
 box-sizing: border-box;
 scroll-behavior: smooth;
 }
-h1{ color: white;
-}
+
 a {
     text-decoration: none;
     color: #f0f0f0;
@@ -109,4 +108,14 @@ a {
     flex-wrap: wrap;
   }
 
-h1 { font-size: 3rem;}
+h1 { font-size: 3rem;
+color: white;}
+
+@media screen and (max-width: 28.75em){
+  .contact-links { 
+    flex-direction: column;
+    align-items: left;}
+    
+    #welcome-section { background-image: linear-gradient( 270deg, #5bd34b 0%, #e4a00c 50%);
+    }
+}
