@@ -7,6 +7,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
 }
 
 figure {
@@ -15,5 +16,7 @@ figure {
 
 figcaption {
     text-align: center;
-    color: aqua;
+    color:  #FFE807;
+    font-family: 'Days One';
+    font-size: 30px;
 }
