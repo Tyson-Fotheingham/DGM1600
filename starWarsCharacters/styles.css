@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+}
+button {
+    color: black;
+    background-color: yellow;
+    border-color: peru;
+}
+
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mainHeader { 
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure img {
+    max-height: 15rem;
+    margin: 1rem;
+
+}
+
+figcaption {
+    color: yellow;
+    text-align: center;
+}
