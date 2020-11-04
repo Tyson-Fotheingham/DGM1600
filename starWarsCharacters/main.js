@@ -2,6 +2,8 @@ import { people } from '../data/people.js'
 
 const mainContent = document.querySelector('#main')
 
+populatDOM(people)
+
 const mainHeader = document.createElement('header')
 mainHeader.className = 'mainHeader'
 document.body.insertBefore(mainHeader, mainContent)
@@ -20,8 +22,16 @@ otherButton.textContent = 'Other Characters'
 mainHeader.appendChild(otherButton)
 
 const maleCharacters = people.filter(person => person.gender === 'male')
+
 const femaleCharacters = people.filter(person => person.gender === 'female')
-const otherCharacters = people.filter(person => person.gender === 'n/a')
+
+const otherCharacters = people.filter(person => { 
+    if (person.gender === 'n/a' ||
+     person.gender === 'none' ||
+     person.gender === 'hermaphrodite') {
+         
+     }
+})
 
 
 maleButton.addEventListener ('click', (event) => {
