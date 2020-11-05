@@ -25,23 +25,21 @@ const maleCharacters = people.filter(person => person.gender === 'male')
 
 const femaleCharacters = people.filter(person => person.gender === 'female')
 
-const otherCharacters = people.filter(person => { 
-    if (person.gender === 'n/a' ||
-     person.gender === 'none' ||
-     person.gender === 'hermaphrodite') {
-         
-     }
+const otherCharacters = people.filter(person => {
+    if (person.gender === 'n/a' || person.gender === 'none') {
+      return person
+}
 })
 
 
-maleButton.addEventListener ('click', (event) => {
+maleButton.addEventListener('click', (event) => {
     populatDOM(maleCharacters)
 })
 
-femaleButton.addEventListener ('click', () => 
+femaleButton.addEventListener('click', () =>
     populatDOM(femaleCharacters))
 
-    otherButton.addEventListener ('click', () => populatDOM(otherCharacters))
+otherButton.addEventListener('click', () => populatDOM(otherCharacters))
 
 function populatDOM(characters) {
     removeChildren(mainContent)
@@ -52,13 +50,13 @@ function populatDOM(characters) {
         charImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
         charImg.addEventListener('error', () => charImg.hidden = ture)
         const charCaption = document.createElement('figcaption')
-        charCaption.textContent = element.name 
-    
+        charCaption.textContent = element.name
+
         charFigure.appendChild(charImg)
         charFigure.appendChild(charCaption)
-    
+
         mainContent.appendChild(charFigure)
-        })
+    })
 
 }
 
@@ -66,7 +64,7 @@ function populatDOM(characters) {
 function getLastNumber(url) {
     let end = url.lastIndexOf('/')
     let start = end - 2
-    if (url.charAt(start)=== '/') {
+    if (url.charAt(start) === '/') {
         start++
     }
     return (url.slice(start, end))
@@ -74,7 +72,7 @@ function getLastNumber(url) {
 
 function removeChildren(container) {
     while (container.firstChild) {
-    container.removeChild(container.firstChild);
+        container.removeChild(container.firstChild);
     }
 
 }

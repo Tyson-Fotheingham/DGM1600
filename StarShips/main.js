@@ -7,10 +7,10 @@ const shipView = document.querySelector('.main')
 function populateNav(starships) {
     starships.forEach(starship => {
         let anchorWrap = document.createElement('a')
-        anchorWrap = '#'
+        anchorWrap.href = '#'
         anchorWrap.addEventListener('click', event => {
             let shipName = event.target.textContent
-            cont foundShip = starships.find(ship => ship.name === shipName)
+            const foundShip = starships.find(ship => ship.name === shipName)
             populateShipView(foundShip)
 
         })
@@ -18,13 +18,14 @@ function populateNav(starships) {
         let listItem = document.createElement('li')
         listItem.textContent = starship.name
 
-        ancherWrap.appendChild(listItem)
+        anchorWrap.appendChild(listItem)
         navList.appendChild(anchorWrap)
         nav.appendChild(navList)
-    });
+    })
 }
 
 function populateShipView(shipData) {
+    console.log(shipData)
 
 }
 
