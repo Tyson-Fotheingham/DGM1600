@@ -2,16 +2,39 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+}
+
+.container {
+    display: flex;
+}
+
+.main {
+    margin: 8rem;
+
+}
+
+.modal-content img {
+    display: flex;
+    justify-content: center;
+}
 
 header, footer {
     display: flex;
     justify-content: center;
     font-size: larger;
+    color: yellow
+}
+
+h1 {
+    font-size: xx-large;
 }
 
 a {
     text-decoration: none;
     font-size: large;
+    color: yellow;
 }
 
 li {
