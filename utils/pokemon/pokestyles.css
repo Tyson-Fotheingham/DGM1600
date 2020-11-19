@@ -1,0 +1,13 @@
+.pokemonGrid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.pokecard{
+    background-color: blueviolet;
+    width: 200px;
+    height: 250px;
+
+}
