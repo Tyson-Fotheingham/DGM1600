@@ -14,7 +14,7 @@ async function getAPIData(url) {
 //using the API data function
 
 function loadPage(data) {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon`).then //?limit=25&offset=800`).then
+    getAPIData(`https://pokeapi.co/api/v2/pokemon`).then
         (async (data) => {
             for (const pokemon of data.results) {
                 await getAPIData(pokemon.url).then((pokeData) => {
@@ -52,11 +52,6 @@ function populatePokeCard(singlePokemon) {
         pokeCard.classList.toggle('is-flipped')
     })
 
-
-
-
-
-
     pokeCard.appendChild(populateCardFront(singlePokemon))
     pokeCard.appendChild(populateCardBack(singlePokemon))
     pokeScene.appendChild(pokeCard)
@@ -87,19 +82,16 @@ function populateCardBack(pokemon) {
 
 function getMovesDetails(pokemonMoves) {
     const nonNullMoves = pokemonMoves.filter(async (move) => {
-        if(!move.move) return
+        if (!move.move) return
         const moveData = await getAPIData(move.move.url)
         console.log
         if ((moveData.accuracy && moveData.power) !== null) {
             return moveData
         }
     })
-    console.log(nonNullMoves.length)
-    /*   const result = pokemonMoves.reduce(async (acc, move) => {
-           const moveData = await getAPIData(move.move.url)
-           console.log(moveData.accuracy, moveData.power)
-       }, {})*/
+console.log(nonNullMoves.length)
 }
+
 
 function getImageFileName(pokemon) {
     if (pokemon.id < 10) {
@@ -120,4 +112,5 @@ function Pokemon(name, height, weight, abilities, moves) {
     this.id = 900
     this.moves = moves
 }
+
 
