@@ -11,6 +11,7 @@ header {
     color: #A0261A;
     background: #0B2647;
     border: 5px solid #FFFFFF;
+    border-radius: 5px;
     padding: 1rem;
     font-size: x-large;
 }
@@ -26,6 +27,14 @@ header {
 
 .senatorGrid img{
     border: 3px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.senatorGrid figcaption{
+    background: #0B2647;
+    border: 2px solid #FFFFFF;
+    color: #A0261A;
+    border-radius: 5px;
 }
 #buttonHeader {
     display: flex;
@@ -34,7 +43,7 @@ header {
 
 button{
     border: 3px solid #FFFFFF;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 40px;
     justify-content: space-evenly;
     color: #FFFFFF;
