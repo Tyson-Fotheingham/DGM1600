@@ -5,9 +5,15 @@ const senatorGrid = document.querySelector('.senatorGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
 
+
 birthdayButton.addEventListener('click', () => {
     birthdaySort()
 })
+
+seniorityButton.addEventListener('click', () => {
+    senioritySort()
+})
+
 
 function populateSenatorDiv(simpleSenetors) {
     removeChildren(senatorGrid)
@@ -48,12 +54,27 @@ function getSimlifiedSenators(senatorArray) {
     })
 }
 
+
+
+const republicans = getSimlifiedSenators(senators).filter(senator => senator.party === 'R')
+const democrats = getSimlifiedSenators(senators).filter(senator => senator.party === 'D')
+
 const mostSeniority = getSimlifiedSenators(senators).reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator)
 
+const missedVotes = getSimlifiedSenators(senators).reduce((acc, senator) => acc.missedVotesPct > senator.missedVotesPct ? acc : senator)
+
 function birthdaySort() {
-    populateSenatorDiv(getSimplifiedSenators(senators).sort((a, b) => {
+    populateSenatorDiv(getSimlifiedSenators(senators).sort((a, b) => {
+        return a.date_of_birth - b.date_of_birth
+    }))
+}
+
+function senioritySort() {
+    populateSenatorDiv(getSimlifiedSenators(senators).sort((a, b) => {
         return a.seniority - b.seniority
     }))
 }
+
+console.log(mostSeniority, missedVotes, republicans, democrats)
 
 populateSenatorDiv(getSimlifiedSenators(senators))
