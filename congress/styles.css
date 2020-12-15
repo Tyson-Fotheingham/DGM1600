@@ -8,14 +8,24 @@ body{
 
 header {
     text-align: center;
-    color: white;
-    background: navy;
+    color: #A0261A;
+    background: #0B2647;
+    border: 5px solid #FFFFFF;
+    padding: 1rem;
+    font-size: x-large;
 }
 
 .senatorGrid{
     display: flex;
     flex-wrap: wrap;
-    color: white;
+    justify-content: space-evenly;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+}
+
+.senatorGrid img{
+    border: 3px solid #FFFFFF;
 }
 #buttonHeader {
     display: flex;
@@ -23,9 +33,10 @@ header {
 }
 
 button{
+    border: 3px solid #FFFFFF;
     border-radius: 10px;
     height: 40px;
     justify-content: space-evenly;
-    color: white;
-    background: red;
+    color: #FFFFFF;
+    background: #A0261A;
 }
