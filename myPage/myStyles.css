@@ -31,13 +31,14 @@ body, p, h1, h2, h3, h4, h5, h6 {
     header {
         text-align: center;
         background-color: #BF1784;
-        font-weight: 500;
+        font-weight: bolder;
         background-image: url(images/background1.png);
         background-repeat: no-repeat;
         background-position: left top;
         background-size: 100px;
         padding-bottom: 1rem;
         text-shadow: 1px 2px 5px black;
+        
     }    
     
     main{
@@ -100,6 +101,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
             color: black;
             text-decoration: none;
             border-right:  solid black 1px;
+            font-weight: bold;
             }
         /* --helps to show people what they are selecting-- */
         nav ul.mynav li a:hover {
@@ -155,5 +157,85 @@ body, p, h1, h2, h3, h4, h5, h6 {
         text-align: center;
         font-size: .8rem;
         padding: .5rem;
-        font-weight: 500;
+        font-weight: 500px}
     }
+
+    /* Planets page*/
+
+    .planet h2 {
+text-align: center;
+font-size: x-large;
+font-weight: bold;
+border-bottom: 3px solid black;
+    }
+    .planet button {
+       display: inline-flex;
+       justify-content: space-around;
+       margin: 1rem;
+       padding: 5px;
+       max-width: 400px;
+       max-height: 250px;
+       margin-left: 3rem;
+       box-shadow: 4px 4px 2px black;
+       border: 2px solid black;
+       border-radius: 20px;
+       background: lightgray;
+    }
+
+    #main{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background:  linear-gradient( #202D3F,  black 80%, #202D3F);
+    }
+
+    #main img{
+        max-width: 200px;
+        max-height: 200px;
+        border: 1px solid black;
+        border-radius: 100px;
+        margin: 2rem;
+    }
+
+    #main figcaption{
+        color: white;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    /*Thakn you page*/
+
+
+    #db {
+        color: white;
+    }
+
+    #thx{
+        background:  linear-gradient( white,  black 80%, #202D3F);
+    }
+
+    #thx h1{
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+
+    #thx img{
+        max-height: 500px;
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: float 3s ease-out infinite;
+  
+    }
+    @keyframes float {
+        50% {
+           transform: translate(0, 20px);
+        }
+      }
+
+
+      #thx p{
+          text-align: center;
+          color: white;
+      }
